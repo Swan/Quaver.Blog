@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
+        {% if page.redirect_url %}
+        <meta http-equiv="Refresh" content="0; url={{ page.redirect_url }}" />
+        {% endif %}
+                                                                        
         <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
         {% include meta.html %}
         <!--[if lt IE 9]>
